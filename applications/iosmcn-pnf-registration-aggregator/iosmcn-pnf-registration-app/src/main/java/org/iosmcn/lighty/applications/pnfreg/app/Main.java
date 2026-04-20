@@ -123,8 +123,6 @@ public class Main {
                 modulesConfig = ModulesConfig.getModulesConfig(Files.newInputStream(configPath));
             } else {
                 LOG.info("using default configuration ...");
-            //    Set<YangModuleInfo> modelPaths = Stream.concat(RestConfConfigUtils.YANG_MODELS.stream(),
-            //            NetconfConfigUtils.NETCONF_TOPOLOGY_MODELS.stream()).collect(Collectors.toSet());
                 Set<YangModuleInfo> modelPaths = Stream.of(RestConfConfigUtils.YANG_MODELS.stream(),
                     NetconfConfigUtils.NETCONF_TOPOLOGY_MODELS.stream(), NetconfConfigUtils.NETCONF_CALLHOME_MODELS.stream()).flatMap(s -> s).collect(Collectors.toSet());
                 ArrayNode arrayNode = YangModuleUtils

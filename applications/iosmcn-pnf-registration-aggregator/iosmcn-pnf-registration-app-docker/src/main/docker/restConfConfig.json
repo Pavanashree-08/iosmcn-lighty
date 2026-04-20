@@ -5,6 +5,8 @@
         "maxDataBrokerFutureCallbackPoolSize":10,
         "metricCaptureEnabled":false,
         "mailboxCapacity":1000,
+        "moduleShardsConfig": "configuration/initial/module-shards.conf",
+        "modulesConfig": "configuration/initial/modules.conf",
         "domNotificationRouterConfig":{
             "queueDepth":65536,
             "spinTime":0,
@@ -26,16 +28,24 @@
                 { "usedBy":"CONTROLLER/NETCONF","name":"yang-ext","revision":"2013-07-09","nameSpace":"urn:opendaylight:yang:extension:yang-ext"},
                 { "usedBy":"CONTROLLER","name":"cluster-admin","revision":"2025-01-31","nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:md:sal:cluster:admin"},
                 { "usedBy":"CONTROLLER","name":"odl-general-entity","revision":"2015-09-30","nameSpace":"urn:opendaylight:params:xml:ns:yang:mdsal:core:general-entity"},
-                { "usedBy":"CONTROLLER","name":"distributed-datastore-provider","revision": "2025-01-30","nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:config:distributed-datastore-provider"},
+                { "usedBy":"CONTROLLER","name":"distributed-datastore-provider","revision":"2025-01-30","nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:config:distributed-datastore-provider"},
                 { "usedBy":"CONTROLLER","name":"odl-entity-owners","nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:entity-owners"},
                 { "usedBy":"NETCONF","name":"netconf-keystore","revision":"2024-07-08","nameSpace":"urn:opendaylight:netconf:keystore"},
                 { "usedBy":"NETCONF","name":"netconf-node-topology","revision":"2025-11-03","nameSpace":"urn:opendaylight:netconf-node-topology"},
                 { "usedBy":"NETCONF","name":"netconf-node-optional","revision":"2022-12-25","nameSpace":"urn:opendaylight:netconf-node-optional"},
                 { "usedBy":"NETCONF","name":"ietf-netconf","revision":"2011-06-01","nameSpace":"urn:ietf:params:xml:ns:netconf:base:1.0"},
                 { "usedBy":"NETCONF","name":"ietf-yang-library","revision":"2019-01-04","nameSpace":"urn:ietf:params:xml:ns:yang:ietf-yang-library"},
-                { "usedBy":"NETCONF","name":"odl-netconf-callhome-server","revision":"2024-01-29","nameSpace":"urn:opendaylight:params:xml:ns:yang:netconf-callhome-server"}
+                { "usedBy":"NETCONF","name":"odl-netconf-callhome-server","revision":"2024-01-29","nameSpace":"urn:opendaylight:params:xml:ns:yang:netconf-callhome-server"},
+                { "usedBy":"RESTCONF","name":"ietf-restconf","revision":"2017-01-26","nameSpace":"urn:ietf:params:xml:ns:yang:ietf-restconf"},
+                { "usedBy":"RESTCONF","name":"ietf-restconf-monitoring","revision":"2017-01-26","nameSpace":"urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring"},
+                { "usedBy":"RESTCONF","name":"sal-remote","revision":"2014-01-14","nameSpace":"urn:opendaylight:params:xml:ns:yang:controller:md:sal:remote"},
+                { "usedBy":"RESTCONF","name":"sal-remote-augment","revision":"2023-11-03","nameSpace":"urn:sal:restconf:event:subscription"}
+                
             ]
         }
+    },
+    "modules": {
+        "moduleTimeoutSeconds":60
     },
     "restconf":{
         "inetAddress": "0.0.0.0",

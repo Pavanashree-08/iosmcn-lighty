@@ -38,7 +38,7 @@ import io.lighty.modules.pnf.registration.MessageClient;
 public class PNFMountPointClient extends MessageClient {
 	private static Logger LOG = LoggerFactory.getLogger("PNFMountPointClient");
     private static final String MOUNTPOINT_URI =
-            "restconf/data/network-topology:network-topology/topology=topology-netconf/node=";
+            "rests/data/network-topology:network-topology/topology=topology-netconf/node=";
     public static final String DEVICE_NAME = "@device-name@", DEVICE_IP = "@device-ip@", DEVICE_PORT = "@device-port@",
             USERNAME = "@username@", PASSWORD = "@password@", KEY_ID = "@key-id@";
     private static final String PROTOCOL = "protocol_sec";
